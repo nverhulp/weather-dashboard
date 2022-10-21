@@ -39,3 +39,24 @@ var loadCities = function() {
         }
     }
 }
+
+// SEARCH FOR NEW CITY
+var formSubmitHandler = function(event) {
+    event.preventDefault();
+    var city = cityInputEl.ariaValueMax.trim();
+    if(city) {
+        getLatLon(city);
+        cityInputEl.value = '';
+    } else {
+        alert("You must enter a city name");
+    }
+};
+
+// OLD SEARCH RECLICKED
+var buttonClickHandler = function(event) {
+    if(event.target.type === 'submit') {
+        var city = event.target.textContent;
+        getLatLon(city);
+        cityInputEl.textContent = '';
+    }
+}
