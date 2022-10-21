@@ -60,3 +60,26 @@ var buttonClickHandler = function(event) {
         cityInputEl.textContent = '';
     }
 }
+
+// LATITUDE AND LONGITUDE
+var getLatLon = function(city) {
+    var apiKey = "3cc63ff09703a0958e90f4724b969776";
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&unites=imperial*appid=" + apiKey;
+    fetch(apiUrl)
+    .then(function(response) {
+        if(response.ok) {
+            response.json().then(function(data) {
+                localStorage.setItem('last-search', data.name)
+                loadCities();
+                var city = data.name;
+                var lat = data.coord.lat;
+                var lon = data.coord.lon;
+                getWeather(lat, lon, city);
+            });
+        } else {
+            alert("Error: No city was found");
+        }
+    }).catch(function(error) {
+        alert("Unable to connect")
+    });
+};
