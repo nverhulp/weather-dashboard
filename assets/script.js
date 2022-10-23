@@ -83,3 +83,73 @@ var getLatLon = function(city) {
         alert("Unable to connect")
     });
 };
+
+// CURRENT DAY WEATHER AND 5 DAY FORECAST
+var getWeather = function(lat, lon, city) {
+    var apiKey = "3cc63ff09703a0958e90f4724b969776";
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + lat + '&lon=' + lon + '&exclude=minutely,hourly,alerts&units=imperial&appid=' + apiKey;
+    fetch(apiUrl) 
+    .then(function(response) {
+        response.json().then(function(data) {
+            var current = data.current;
+            var daily = data.daily;
+            displayCurrentWeather(current, city);
+            displayForecast(daily);
+        });
+    });
+};
+
+var displayCurrentWeather = function(data, city) {
+    console.log(data);
+
+    // CLEAR RESULTS
+    resultsContainerEl.textContent = '';
+
+    // NEW WEATHER CONTAINER/BOX
+    var currentWeatherEl = document.createElement('article');
+    currentWeatherEl.id = 'current';
+    currentWeatherEl.classList = "p-10";
+
+    // HEADER
+    var headerEl = document.createElement('header');
+    headerEl.id = 'city-name';
+    var today = new Date();
+    var date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
+    headerEl.textContent = city + ' (' + date + ') ';
+
+    // ICON
+    var icon = data.weather[0].icon;
+    var imgEl = document.createElement('img');
+    imgEl.classList = 'absolute-position';
+    imgEl.setAttribute('src', 'http://openweathermap.org/img/w/' + icon + '.png');
+
+    // TEMPERATURE
+    var tempEl = document.createElement('p');
+    tempEl.innerHTML = 'Temp: ' + data.temp + '<span>&#176;</span>F';
+    tempEl.classList = 'p-20-0-10-0';
+
+    // WIND
+    var windEl = document.createElement('p');
+    windEl.textContent = 'Wind: ' + data.wind_speed + 'MPH';
+    windEl.classList = 'p-10-0';
+
+    // HUMIDITY
+    var humidityEl = document.createElement('p');
+    humidityEl.textContent = 'Humidity: ' + data.humidityEl + '%';
+    humidityEl.classList = 'p-10-0';
+
+    // UV INDEX
+    var uvIndexEl = document.createElement('p');
+    uvIndexEl.innerHTML = "UV Index: <span id='uvi'>" + data.uvi + '</span>';
+    uvIndexEl.classList = 'p-10-0';
+
+    // HAVE DATA DISPLAY IN CORRECT SPOT
+    currentWeatherEl.appendChild(headerEl);
+    currentWeatherEl.appendChild(imgEl);
+    currentWeatherEl.appendChild(tempEl);
+    currentWeatherEl.appendChild(windEl);
+    currentWeatherEl.appendChild(humidityEl);
+    currentWeatherEl.appendChild(uvIndexEl);
+    resultsContainerEl.appendChild(currentWeatherEl);
+}
+
