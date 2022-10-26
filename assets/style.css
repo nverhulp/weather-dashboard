@@ -13,3 +13,41 @@ body {
     background-color: skyblue;
     padding: 20px;
 }
+
+.title {
+    color: white;
+    text-align: center;
+}
+
+.absolute-position {
+    position: absolute;
+}
+
+#search-form {
+    border-bottom: 2px solid blueviolet;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#city-input {
+    border-radius: 5px;
+    border-width: 1.5px;
+    font-size: x-large;
+}
+
+/* SEARCH BUTTON */
+.btn {
+    background-color: blue;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: large;
+    cursor: pointer;
+    color: white;
+}
+
+.btn:hover {
+    background-color: aqua;
+}
