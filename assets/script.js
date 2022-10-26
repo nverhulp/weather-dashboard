@@ -153,3 +153,57 @@ var displayCurrentWeather = function(data, city) {
     resultsContainerEl.appendChild(currentWeatherEl);
 }
 
+// FORECAST
+var displayForecast = function(data) {
+    console.log(data);
+    var forecastEl = document.createElement('div');
+
+    var subHeaderEl = document.createElement('subHeader');
+    subHeaderEl.textContent = '5-Day Forecast';
+    subHeaderEl.classList = 'p-20-0-10-0';
+
+    var daysContainerEl = document.createElement('div');
+    daysContainerEl.classList = 'row space-between';
+
+    for (var i = 1; i < 6; i++) {
+        var singleDayEl = document.createElement('article');
+        singleDayEl.classList = 'col-5 col-xl-2 p-10 dark-bg mb-20';
+    
+    var date = new Date(date[i].dt * 1000);
+    var fullDate = (date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear();
+    var h4El = document.createElement('h4');
+    h4El.textContent = fullDate;
+    h4El.classList = 'white-font';
+
+    var icon = data[i].weather[0].icon;
+    var imgEl = document.createElement('img');
+    imgEl.setAttribute('src', 'http://openweathermap.org/img/w/' + icon + '.png');
+
+    var tempEl = document.createElement('p');
+    tempEl.innerHTML = 'Temp: ' + data[i].temp.day + ' <span>&#176;</span>F';
+    tempEl.classList = 'p-10-0 white-font lg-font-size';
+
+    var windEl = document.createElement('p');
+    windEl.textContent = 'Wind: ' + data[i].wind_speed + ' MPH';
+    windEl.classList = 'p-10-0 white-font lg-font-size';
+
+    var humidityEl = document.createElement('p');
+    humidityEl.textContent = 'Humidity: ' + data[i].humidity + ' %';
+    humidityEl.classList = 'p-10-0 white-font lg-font-size';
+
+    singleDayEl.appendChild(h4El);
+    singleDayEl.appendChild(imgEl);
+    singleDayEl.appendChild(tempEl);
+    singleDayEl.appendChild(windEl);
+    singleDayEl.appendChild(humidityEl);
+    daysContainerEl.appendChild(singleDayEl);
+    }
+
+forecastEl.appendChild(subHeaderEl);
+forecastEl.appendChild(daysContainerEl);
+resultsContainerEl.appendChild(forecastEl);
+}
+
+loadCities();
+searchFormEl.addEventListener('submit', formSubmitHandler);
+previousSearchesEl.addEventListener('click', buttonClickHandler);
