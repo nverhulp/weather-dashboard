@@ -1,43 +1,41 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+/* HEADER */
 .dashboard {
-    background-color: skyblue;
-    padding: 20px;
+    background-color: rgb(66, 54, 241);
+    padding: 20px; 
+
 }
 
 .title {
     color: white;
     text-align: center;
+
 }
 
-.absolute-position {
-    position: absolute;
-}
-
+/* SEARCH */
 #search-form {
-    border-bottom: 2px solid blueviolet;
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #city-input {
     border-radius: 5px;
-    border-width: 1.5px;
-    font-size: x-large;
+    border-width: 2px;
+    font-size: large;
 }
 
-/* SEARCH BUTTON */
 .btn {
-    background-color: blue;
+    background-color: #76b8f2;
     border: none;
     padding: 10px;
     width: 100%;
@@ -49,5 +47,110 @@ body {
 }
 
 .btn:hover {
-    background-color: aqua;
+    filter: brightness(110%);
+}
+
+/* BOXES OF RESULTS */
+
+.col-5 {
+    flex: 0 0 calc(100% * 5.75 / 12);
+}
+
+.col-6 {
+    flex: 0 0 calc(100% * 6 / 12);
+}
+
+.col-12 {
+    flex: 0 0 100%;
+}
+
+.dark-bg {
+    background-color: rgb(104, 104, 189);
+}
+
+.lg-font-size {
+    font-size: large;
+}
+
+.m-10-0 {
+    margin: 10px 0;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.p-10-0 {
+    padding: 10px 0;
+}
+
+.p-20-0-10-0 {
+    padding: 20px 0 10px 0px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.white-font {
+    color: white;
+}
+
+#results {
+    padding: 20px;
+}
+
+#current {
+    border: 1px solid #000;
+}
+
+#city-name {
+    display: inline;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .previous-search {
+        width: calc(50% - 20px);
+        margin: 5px 10px;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .col-sm-4 {
+      flex: 0 0 calc(100% * 4 / 12);
+    }
+
+    .col-sm-8 {
+      flex: 0 0 calc(100% * 8 / 12);
+    }
+}
+ 
+@media screen and (min-width: 970px) {
+    .col-lg-3 {
+      flex: 0 0 calc(100% * 3 / 12);
+    }
+  
+    .col-lg-9 {
+      flex: 0 0 calc(100% * 9 / 12);
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .col-xl-2 {
+      flex: 0 0 calc(100% * 2 / 12);
+    }
 }
