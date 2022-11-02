@@ -36,7 +36,7 @@ THEN I am again presented with current and future conditions for that city
 
 ## URL of Deployed Application
 
-[Deployed Gitpage]()
+[Deployed Gitpage](https://nverhulp.github.io/weather-dashboard/)
 
 ## Credits
 1. Website to retrieve weather data from [5 Day Weather Forecast](https://openweathermap.org/forecast5)
