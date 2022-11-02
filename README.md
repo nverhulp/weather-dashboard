@@ -33,3 +33,6 @@ THEN I am again presented with current and future conditions for that city
 [Deployed Gitpage]()
 
 ## Credits
+1. Website to retrieve weather data from [5 Day Weather Forecast](https://openweathermap.org/forecast5)
+2. Information about API keys from [freeCodeCamp](https://www.freecodecamp.org/news/best-practices-for-building-api-keys-97c26eabfea9/)
+3. Information on how to work with OpenWeather API from [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
