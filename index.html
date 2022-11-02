@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel='stylesheet' 
+    href="./assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-
     <header class="dashboard full-width">
-        <h1 class="title">Weather Dashboard</h1>
+        <h1 class='title'> Weather Dashboard</h1>
     </header>
-
     <main>
-        <div class="row space-between">
-            <div id="search" class="col-12 col-sm-4 col-lg-3 p-10">
-                <div class="search-form-container">
-                    <form id="search-form" class="form-group">
-                        <div class="form-group">
-                            <label class="form-label" for="city">
-                                <h2 class="font-weight-bold">Search for a City:</h2>
-                            </label>
-                            <input name="city" id="city-input" type="text" class="full-width p-10 m-10-0"
-                                placeholder="Sacramento">
+        <div class='row space-between'>
+            <div id='search' class='col-12 col-sm-4 col-lg-3 p-10'>
+                <div class='search-form-container'>
+                    <form id='search-form' class='form-group'>
+                        <div class='form-group'>
+                            <label class='form-label' for='city'><h2 class='font-weight-bold'>Search for a City:</h2></label>
+                            <input name='city' id='city-input' type='text' autofocus='true' class='full-width p-10 m-10-0' placeholder='Davis' />  
                         </div>
-                        <button type="submit" class="btn">Search</button>
+                        <button type='submit' class='btn blue-btn white-font'>Search</button>
                     </form>
                 </div>
-                <div id="city-boxes"></div>
+                <div id='city-buttons'></div>
             </div>
-            <div id="results" class="col-12 col-sm-8 col-lg-9">Forecast</div>
+            <div id='results' class='col-12 col-sm-8 col-lg-9'>
+            </div>
         </div>
     </main>
 
-    <script src="./assets/script.js"></script>
-
+    <script src='./assets/script.js'></script>
 </body>
-
 </html>
