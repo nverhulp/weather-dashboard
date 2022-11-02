@@ -62,7 +62,7 @@ var buttonClickHandler = function (event) {
 
 // LATITUDE AND LONGITUDE
 var getLatLon = function (city) {
-    var apiKey = "730ce6df07f032d600c57112c0f97575";
+    var apiKey = "a14ea1f8ac9a7a8e8c150de6e88d95bd";
     var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=' + apiKey;
     fetch(apiUrl)
         .then(function (response) {
@@ -86,7 +86,7 @@ var getLatLon = function (city) {
 
 // CURRENT WEATHER AND PREDICTED
 var getWeather = function (lat, lon, city) {
-    var apiKey = '730ce6df07f032d600c57112c0f97575';
+    var apiKey = "a14ea1f8ac9a7a8e8c150de6e88d95bd";
     var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&exclude=minutely,hourly,alerts&units=imperial&appid=' + apiKey;
     fetch(apiUrl)
         .then(function (response) {
