@@ -14,6 +14,8 @@ Your challenge is to build a weather dashboard that will run in the browser and 
 
 ## Deployed Page
 
+<img src="./assets/deployed-page.png">
+
 ## Acceptance Criteria
 
 GIVEN a weather dashboard with form inputs
