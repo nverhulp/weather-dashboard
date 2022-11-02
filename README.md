@@ -27,6 +27,10 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
 ## Comments
+1. User can search for a city
+2. Current weather information appears for city as well as 5 day forecast
+3. User can click on previous searches
+4. Icon appears in each box to represent current weather
 
 ## URL of Deployed Application
 
