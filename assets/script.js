@@ -4,7 +4,7 @@ var previousSearchesEl = document.querySelector('#city-buttons');
 var cityInputEl = document.querySelector('#city-input');
 var resultsContainerEl = document.querySelector('#results');
 
-// LOAD CITIES THAT WERE ALREADY SEARCHED 
+// LOAD CITIES THAT WERE ALREADY SEARCHED  
 var loadCities = function () {
     var lastSearch = localStorage.getItem('last-search');
     if (lastSearch) {
