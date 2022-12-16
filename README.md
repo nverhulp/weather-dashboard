@@ -42,3 +42,4 @@ THEN I am again presented with current and future conditions for that city
 1. Website to retrieve weather data from [5 Day Weather Forecast](https://openweathermap.org/forecast5)
 2. Information about API keys from [freeCodeCamp](https://www.freecodecamp.org/news/best-practices-for-building-api-keys-97c26eabfea9/)
 3. Information on how to work with OpenWeather API from [Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
+4. Guide for color styling from [Bootstrap](https://getbootstrap.com/docs/4.0/utilities/colors/)
