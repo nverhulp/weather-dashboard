@@ -1,39 +1,24 @@
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+.search-column{
+  background-color: rgb(79, 163, 180);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 50px 700px;
 }
 
-@media screen and (max-width: 700px) {
-    .previous-search {
-        width: calc(50% - 20px);
-        margin: 5px 10px;
-    }
+header {
+  background-color: rgb(81, 81, 156);
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-@media screen and (min-width: 701px) {
-    .col-sm-4 {
-      flex: 0 0 calc(100% * 4 / 12);
-    }
-
-    .col-sm-8 {
-      flex: 0 0 calc(100% * 8 / 12);
-    }
-}
- 
-@media screen and (min-width: 970px) {
-    .col-lg-3 {
-      flex: 0 0 calc(100% * 3 / 12);
-    }
-  
-    .col-lg-9 {
-      flex: 0 0 calc(100% * 9 / 12);
-    }
+#current-weather,
+#future-five-days {
+  background-color: rgb(115, 198, 243);
+  color: blue;
+  border: 5px solid rgb(226, 150, 219);
+  text-align: center;
+  padding: 10px;
 }
 
-@media screen and (min-width: 1360px) {
-    .col-xl-2 {
-      flex: 0 0 calc(100% * 2 / 12);
-    }
-}
