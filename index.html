@@ -3,41 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <header class = "bg-primary text-white text-center p-2">
-        <h1>Weather Dashboard</h1>
+    <!-- Header -->
+    <header>
+        <h1>Weather Dashboard</h1> 
     </header>
+
+    <!-- Search Container -->
     <main class="container-fluid">
         <div class = "row">
             <div class="col-12 col-md-3 p-2 search-column">
-                <form class = "border p-2" id = "city-search-form">
-                    <h4>Search for a City</h2>
-                    <input id="city" type = "text" autofocus = "true" class = "form-input"/>
+                <form class = "border p-2" id = "city-form">
+                    <h4>Search for a City:</h2>
+                    <input id="city-input" type = "text" autofocus = "true" class = "form-input" placeholder="Search Here"/>
                     <button class = "btn btn-primary" type = "submit">Search</button>
                 </form>
-                <div class = "past-search border" id = "past-search-buttons"></div>
+                <!-- Search History -->
+                <div class = "old-search border" id = "old-search-buttons"></div>
             </div>
-            <div class="col-12 col-md-9">
-                <div class = "row border selected-city" id = "current-forecast">
-                    <div class = "col-12">
-                        <h2 id="searched-city"></h2>
-                        <div id = "current-weather-container" class = "list-group"></div>
+
+            <!-- Current Weather Container -->
+            <section class="col-12 col-md-9">
+                <div id = "current-weather">
+                    <h2 id="current-weather-heading">Current Weather:</h2>
+                    <div class = "row">
+                        <h2 id="city-search-input"></h2>
+                        <div id = "weather-container"></div>
+                            <div id="display-temp"></div>
+                            <div id="display-humidity"></div>
+                            <div id="display-wind"></div>
                     </div>  
                 </div>
-                <div class = "row border" id = "five-day-forecast">
-                        <h2 class= "col-12" id = "forecast"></h2>
-                        <div class = "d-flex" id = "fiveday-container"></div>
+
+                <br>
+
+                <!-- Future 5-Day Forecast Container -->
+                <div class = "row border" id = "future-five-days">
+                        <h2 class= "col-12" id = "forecast-title">Five-Day Forecast:</h2>
+                        <div class = "d-flex justify-content-around" id = "future-five-container"></div>
                 </div>  
             </div>
         </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
